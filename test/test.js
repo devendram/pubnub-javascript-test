@@ -17,7 +17,7 @@
 
 	var message_string = 'Hi from Javascript';
 	var message_jsono = {'message': 'Hi from Javascript'};
-	var message_jsona = ['message' , 'Hi from javascript'];
+	var message_jsona = ['message' , 'Hi Hi from javascript'];
 
 	describe('Pubnub', function() {
 		this.timeout(10000);
