@@ -99,30 +99,4 @@
 			})
 		})
 	})
-	describe('#here_now', function(){
-        var here_now_channel = channel + '-' + Date.now();
-		this.timeout(60000);
-		before(function(done){
-			pubnub.subscribe({channel: here_now_channel, 
-				message : message_string, 
-				connect : function(response){
-					done();			
-				}
-			});
-
-		})
-		after(function(done){
-			pubnub.unsubscribe({ channel: here_now_channel });
-			done();
-		})
-		it('should return 1 when one subscriber on channel', function(done) {
-
-			pubnub.here_now({channel : here_now_channel,
-				callback : function(response) {
-					response['occupancy'].should.eql(1);
-					done();
-				}
-			})
-		})
-	})
 })
