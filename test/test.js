@@ -1,7 +1,5 @@
 	var should = require('should');
 
-	var PUBNUB = require('../pubnub-3.4.2');
-
 	var pubnub = PUBNUB.init({
 		publish_key 	: 'demo',
 		subscribe_key 	: 'demo'
